@@ -12,7 +12,7 @@ dependencies = [
     "pyright",
 ]
 
-requires-python = "==3.11.4"
+requires-python = "==3.10.11"
 license = {text = "MIT"}
 
 [tool.pdm.dev-dependencies]
@@ -39,7 +39,7 @@ reportMissingImports = true
 reportMissingTypeStubs = false
 reportGeneralTypeIssues = false
 
-pythonVersion = "3.11.4"
+pythonVersion = "3.10.11"
 pythonPlatform = "Linux"
 
 venvPath = "."
