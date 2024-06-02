@@ -23,6 +23,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pdm
         pdm config python.use_venv false
+        mkdir -p .mypy_cache
 
     - name: Cache PDM virtual environment
       uses: actions/cache@v2
