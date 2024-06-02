@@ -1,12 +1,12 @@
 # Setup
 
 ### Install dependencies
-- Production 
+- Production
 ```shell
 cd /path/to/project/root
 pdm install --prod
 ```
-- Development 
+- Development
 ```shell
 cd /path/to/project/root
 pdm install
@@ -43,10 +43,10 @@ pdm run python -m pytest -k test_name
 ```
 # Pre-commit, Git hooks
 - This Python template project leverages pre-commit hooks to ensure code quality and consistency. It includes tools like Ruff, Black, Mypy, Pydocstyle, Pyright, and general hooks for automatic code formatting and linting.
-- To apply hooks: 
+- To apply hooks:
   - make sure the pre-commit added to local git hooks
 https://gist.github.com/KirillY/6a39310b1fea1a8cc7d0d81632426c99#pre-commit-checks
-  - before commiting, execute 
+  - before commiting, execute
 ```shell
 pdm run pre-commit run --all-files
 ```

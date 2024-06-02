@@ -1,5 +1,5 @@
-import pytest
 from source.main import process_data
+
 
 def test_process_data():
     """Test that all integers in the list are incremented by 1."""
