@@ -36,7 +36,7 @@ jobs:
       run: pdm install --prod
 
     - name: Run pre-commit hooks
-      run: pre-commit run --all-files
+      run: pdm run pre-commit run --all-files
 
     - name: Run pytest
       run: pdm run pytest
