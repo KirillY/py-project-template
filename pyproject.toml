@@ -1,0 +1,46 @@
+[project]
+name = ""
+version = ""
+description = "Python template project"
+authors = [
+    {name = "Kirill Lapshin", email = "kirillonwork@gmail.com"},
+]
+dependencies = [
+    "pytest>=7.3.1",
+    "pre-commit>=3.3.1",
+    "httpx>=0.24.1",
+    "pyright>=1.1.347",
+]
+
+requires-python = "==3.11.4"
+license = {text = "MIT"}
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "jupyter>=1.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.testmon]
+testmon_ignore_dependencies = true
+
+[tool.pyright]
+
+exclude = [
+    "**/__pycache__",
+    "**/mypy_cache",
+    "**/pytest_cache",
+    "**/ruff_cache",
+    "**/scripts",
+]
+defineConstant = { DEBUG = true }
+
+reportMissingImports = true
+reportMissingTypeStubs = false
+reportGeneralTypeIssues = false
+
+pythonVersion = "3.11.4"
+pythonPlatform = "Linux"
+
+venvPath = "."
+venv = ".venv"
