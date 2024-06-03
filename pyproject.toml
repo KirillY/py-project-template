@@ -19,7 +19,6 @@ license = {text = "MIT"}
 [tool.pdm.dev-dependencies]
 dev = [
     "jupyter",
-    "python-dotenv",
 ]
 
 [tool.testmon]

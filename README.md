@@ -1,14 +1,19 @@
+Certainly! Here’s an updated version of your README, incorporating the details about creating `.ipynb` files in VSCode, which supports Jupyter notebooks natively. This information will be useful for developers who prefer using VSCode for their development activities:
+
+---
+
 # Python Project Template
 
 [![Build Status](https://github.com/KirillY/py-project-template/actions/workflows/python-ci.yaml/badge.svg)](https://github.com/KirillY/py-project-template/actions/workflows/python-ci.yaml)
 
-This Python project template facilitates the setup and development of Python applications, using PDM (Python Dependency Manager) for effective dependency management. It includes robust pre-commit hooks to ensure code quality and consistency across contributions.
+This Python project template streamlines the setup and development of Python applications, utilizing PDM (Python Dependency Manager) for effective dependency management. It includes robust pre-commit hooks to ensure code quality and consistency across contributions.
 
 ## Features
-- **Dependency Management:** Simplified setup with PDM that supports separate environments for production and development.
+- **Dependency Management:** Simplified setup with PDM supporting separate environments for production and development.
 - **Pre-commit Hooks:** Comes pre-configured with tools such as Ruff, Black, Mypy, and others for automated code formatting and linting.
-- **Environment Variables:** Securely manage settings using `.env` files, which are kept out of source control for security.
-- **Testing:** Integrated support for pytest to streamline running and writing tests.
+- **Environment Variables:** Secure management using `.env` files, kept outside of source control.
+- **Testing:** Integrated pytest support for straightforward test execution.
+- **Jupyter Integration:** In development mode, you can use Jupyter notebooks or VSCode to create `.ipynb` files for ad-hoc experiments. These files should be stored in a `notebooks/` directory that is excluded from version control.
 
 ## Getting Started
 ### Clone the Project
@@ -21,19 +26,28 @@ cd <your-project-name>
 
 ### Install Dependencies
 ```shell
-# Install production dependencies
+# Install production dependencies (excludes Jupyter to speed up installation)
 pdm install --prod
 
-# Install all dependencies for development
+# Install all dependencies including Jupyter for development
 pdm install
 ```
 
 ### Configure Environment Variables
 ```shell
-# Store environment variables securely
+# Securely store environment variables
 mkdir -p .env  # Create a directory for env files if it doesn't exist
-echo "ENV_VARIABLE_NAME=value" > .env/<envname>.fenv
+echo "ENV_VARIABLE_NAME=value" > .env/<envname>.env
 export $(cat .env/<envname>.env | xargs)
+```
+
+### Experiment with Jupyter Notebooks
+```shell
+# Only in development mode
+mkdir -p notebooks  # Create a directory for Jupyter notebooks if it doesn't exist
+# Note: The notebooks/ directory is included in .gitignore to prevent version control
+# You can use Jupyter or VSCode to create and manage `.ipynb` files
+pdm run jupyter notebook
 ```
 
 ### Run Tests
@@ -51,5 +65,5 @@ pdm run python -m pytest -k test_name
 pdm run pre-commit run --all-files
 ```
 
-## Detailed Installation & Configuration Guide
+## Detailed Installation & Configurationz Guide
 For more detailed instructions on setting up and configuring your local environment, refer to [this comprehensive guide](https://gist.github.com/KirillY/6a39310b1fea1a8cc7d0d81632426c99).
