@@ -16,7 +16,7 @@ This Python project template streamlines the setup and development of Python app
 ```shell
 # Clone the repository into a directory of your choice
 cd path/to/parent/directory
-git clone https://github.com/KirillY/py-project-template.git <your-project-name>
+git clone git@github.com:KirillY/py-project-template.git <your-project-directory>
 cd <your-project-name>
 ```
 
