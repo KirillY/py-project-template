@@ -10,6 +10,7 @@ dependencies = [
     "pre-commit",
     "httpx",
     "pyright",
+    "curio",
 ]
 
 requires-python = "==3.10.11"
