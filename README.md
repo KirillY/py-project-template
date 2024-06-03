@@ -1,55 +1,55 @@
+# Python Project Template
+
 [![Build Status](https://github.com/KirillY/py-project-template/actions/workflows/python-ci.yaml/badge.svg)](https://github.com/KirillY/py-project-template/actions/workflows/python-ci.yaml)
-# Description
 
-# Setup
+This Python project template facilitates the setup and development of Python applications, using PDM (Python Dependency Manager) for effective dependency management. It includes robust pre-commit hooks to ensure code quality and consistency across contributions.
 
-### Install dependencies
-- Production
+## Features
+- **Dependency Management:** Simplified setup with PDM that supports separate environments for production and development.
+- **Pre-commit Hooks:** Comes pre-configured with tools such as Ruff, Black, Mypy, and others for automated code formatting and linting.
+- **Environment Variables:** Securely manage settings using `.env` files, which are kept out of source control for security.
+- **Testing:** Integrated support for pytest to streamline running and writing tests.
+
+## Getting Started
+### Clone the Project
 ```shell
-cd /path/to/project/root
-pdm install --prod
+# Clone the repository into a directory of your choice
+cd path/to/parent/directory
+git clone https://github.com/KirillY/py-project-template.git <your-project-name>
+cd <your-project-name>
 ```
-- Development
+
+### Install Dependencies
 ```shell
-cd /path/to/project/root
+# Install production dependencies
+pdm install --prod
+
+# Install all dependencies for development
 pdm install
 ```
 
-
-### Environment variables handling
-- Store environment variables in the `<envname>.env` file
-- Put the file into `.env` folder inside the project folder, ignored by git
-- Alternatively, but `.env` file anywhere outsude the project folder
+### Configure Environment Variables
 ```shell
-ENV_VARIABLE_NAME=value
-```
-- Export environment variables
-```shell
+# Store environment variables securely
+mkdir -p .env  # Create a directory for env files if it doesn't exist
+echo "ENV_VARIABLE_NAME=value" > .env/<envname>.fenv
 export $(cat .env/<envname>.env | xargs)
 ```
 
-### Comprehensive manual for Local Machine Installation & Configuration for a Python Testing Automation project
-- https://gist.github.com/KirillY/6a39310b1fea1a8cc7d0d81632426c99
-
-# Run tests
+### Run Tests
 ```shell
-cd /path/to/project/root
-```
-### Run all tests
-```shell
+# Run all tests
 pdm run python -m pytest
-```
 
-### Run selected test by name
-```shell
+# Run a specific test by name
 pdm run python -m pytest -k test_name
 ```
-# Pre-commit, Git hooks
-- This Python template project leverages pre-commit hooks to ensure code quality and consistency. It includes tools like Ruff, Black, Mypy, Pydocstyle, Pyright, and general hooks for automatic code formatting and linting.
-- To apply hooks:
-  - make sure the pre-commit added to local git hooks
-https://gist.github.com/KirillY/6a39310b1fea1a8cc7d0d81632426c99#pre-commit-checks
-  - before commiting, execute
+
+### Use Pre-commit Hooks
 ```shell
+# Apply pre-commit hooks to all files before committing
 pdm run pre-commit run --all-files
 ```
+
+## Detailed Installation & Configuration Guide
+For more detailed instructions on setting up and configuring your local environment, refer to [this comprehensive guide](https://gist.github.com/KirillY/6a39310b1fea1a8cc7d0d81632426c99).
