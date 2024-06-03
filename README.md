@@ -1,3 +1,6 @@
+[![Build Status](https://github.com/KirillY/py-project-template/actions/workflows/python-ci.yaml/badge.svg)](https://github.com/KirillY/py-project-template/actions/workflows/python-ci.yaml)
+# Description
+
 # Setup
 
 ### Install dependencies

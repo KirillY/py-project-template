@@ -1,4 +1,4 @@
-name: Python CI
+name: Pre-commit and Testing
 
 on:
   push:
