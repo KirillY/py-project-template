@@ -1,7 +1,3 @@
-Certainly! Here’s an updated version of your README, incorporating the details about creating `.ipynb` files in VSCode, which supports Jupyter notebooks natively. This information will be useful for developers who prefer using VSCode for their development activities:
-
----
-
 # Python Project Template
 
 [![Build Status](https://github.com/KirillY/py-project-template/actions/workflows/python-ci.yaml/badge.svg)](https://github.com/KirillY/py-project-template/actions/workflows/python-ci.yaml)
